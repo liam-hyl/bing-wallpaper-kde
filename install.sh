@@ -29,7 +29,7 @@ install_dependencies() {
     
     case $pkg_manager in
         pacman)
-            sudo pacman -S --needed curl jq qt6-tools kf6-kconfig
+            sudo pacman -S --needed curl jq qt6-tools kconfig
             ;;
         apt)
             sudo apt update

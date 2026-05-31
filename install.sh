@@ -29,23 +29,23 @@ install_dependencies() {
     
     case $pkg_manager in
         pacman)
-            sudo pacman -S --needed curl jq qt6-tools
+            sudo pacman -S --needed curl jq qt6-tools kf6-kconfig
             ;;
         apt)
             sudo apt update
-            sudo apt install -y curl jq qttools6-dev-tools
+            sudo apt install -y curl jq qdbus-qt6 kf6-kconfig-bin
             ;;
         dnf|yum)
-            sudo $pkg_manager install -y curl jq qt6-qttools-devel
+            sudo $pkg_manager install -y curl jq qt6-qttools kf6-kconfig
             ;;
         zypper)
-            sudo zypper install -y curl jq libqt6-qttools
+            sudo zypper install -y curl jq qt6-tools-qdbus kf6-kconfig
             ;;
         apk)
-            sudo apk add curl jq qt6-qttools
+            sudo apk add curl jq qt6-qdbus
             ;;
         *)
-            echo "Warning: Unable to automatically install dependencies. Please install manually: curl, jq, qt6-tools"
+            echo "Warning: Unable to automatically install dependencies. Please install manually: curl, jq, qdbus6, kwriteconfig6"
             read -p "Press Enter to continue, or Ctrl+C to exit..." 
             ;;
     esac

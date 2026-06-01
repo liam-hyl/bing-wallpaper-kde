@@ -8,7 +8,7 @@ Automatically download and set the daily Bing wallpaper as both your desktop and
 - KDE Plasma 6 desktop wallpaper update
 - KDE Plasma 6 lock screen wallpaper update
 - Systemd timer automation
-- Automatic cleanup of wallpapers older than 60 days
+- Automatic cleanup of wallpapers older than 60 days(To change retention days, edit ~/bin/bing-wallpaper.sh and set RETENTION_DAYS (0 = keep forever))
 - Prevents duplicate downloads
 
 ## Requirements

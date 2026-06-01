@@ -2,6 +2,8 @@
 
 set -e
 
+RETENTION_DAYS=60
+
 DIR="$HOME/Pictures/BingWallpapers"
 mkdir -p "$DIR"
 
@@ -42,5 +44,7 @@ kwriteconfig6 \
     --key PreviewImage \
     "$FILE"
 
-# Delete wallpapers older than 60 days
-find "$DIR" -type f -mtime +60 -delete
+# Delete wallpapers older than some days
+if [ "$RETENTION_DAYS" -gt 0 ]; then
+    find "$DIR" -type f -mtime +"$RETENTION_DAYS" -delete
+fi

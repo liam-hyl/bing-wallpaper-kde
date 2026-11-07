@@ -24,3 +24,9 @@ git clone https://github.com/liam-hyl/bing-wallpaper-kde.git
 cd bing-wallpaper-kde
 chmod +x install.sh
 ./install.sh
+
+##Uninstallation
+git clone https://github.com/liam-hyl/bing-wallpaper-kde.git
+cd bing-wallpaper-kde
+chmod +x uninstall.sh
+./uninstall.sh
